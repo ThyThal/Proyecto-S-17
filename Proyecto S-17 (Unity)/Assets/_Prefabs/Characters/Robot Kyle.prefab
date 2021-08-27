@@ -460,7 +460,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2518052524958804760
 Transform:
   m_ObjectHideFlags: 0
@@ -1636,6 +1636,8 @@ GameObject:
   - component: {fileID: 4818494276339713875}
   - component: {fileID: -7975070727372609707}
   - component: {fileID: 975585438}
+  - component: {fileID: 8621429976043488677}
+  - component: {fileID: 1660822594}
   m_Layer: 0
   m_Name: Robot Kyle
   m_TagString: Untagged
@@ -1699,6 +1701,32 @@ MonoBehaviour:
   _intersectionArea: {fileID: 864987317}
   isProtected: 0
   absorbed: 5
+--- !u!136 &8621429976043488677
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8396366511113876800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.25604546
+  m_Height: 1.8709284
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.97, z: 0.015985064}
+--- !u!114 &1660822594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8396366511113876800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71c733b6890d32a40a5f03c363393a30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8731419051773834615
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,11 +2136,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f29f670b2c57fd342ae78f4358dc0083, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90d2b2289245cff46833f47fe518aea4, type: 3}
---- !u!4 &864987317 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7364944928835370524, guid: 90d2b2289245cff46833f47fe518aea4, type: 3}
-  m_PrefabInstance: {fileID: 7364944929648629417}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &7364944929146452107 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 638840354, guid: 90d2b2289245cff46833f47fe518aea4, type: 3}
@@ -2126,5 +2149,10 @@ Transform:
 --- !u!1 &1863160645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7364944928222791148, guid: 90d2b2289245cff46833f47fe518aea4, type: 3}
+  m_PrefabInstance: {fileID: 7364944929648629417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &864987317 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7364944928835370524, guid: 90d2b2289245cff46833f47fe518aea4, type: 3}
   m_PrefabInstance: {fileID: 7364944929648629417}
   m_PrefabAsset: {fileID: 0}

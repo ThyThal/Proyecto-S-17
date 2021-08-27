@@ -14,8 +14,6 @@ public class SpellShield : MonoBehaviour
     [SerializeField] private bool isProtected = false;
     [SerializeField] [Range(0,10)] private int absorbed = 0;
 
-
-
     private void Update()
     {
         if (Input.GetKeyDown(_spellKeybind))
