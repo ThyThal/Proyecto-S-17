@@ -18,13 +18,13 @@ public class ThirdPersonMovement : MonoBehaviour
     private bool groundedPlayer;
     private Transform cameraMain;
 
-    private void OnEnable()
+    public void OnEnable()
     {
         movementControl.action.Enable();
         jumpControl.action.Enable();
     }
 
-    private void OnDisable()
+    public void OnDisable()
     {
         movementControl.action.Disable();
         jumpControl.action.Disable();
