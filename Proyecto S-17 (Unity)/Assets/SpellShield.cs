@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SpellShield : MonoBehaviour
 {
+    ThirdPersonMovement controller;
+
     [SerializeField] private Animator _characterAnimator;
     [SerializeField] private Animator _spellAnimator;
     [SerializeField] public ParticleSystem _particlesRings;
@@ -14,18 +16,23 @@ public class SpellShield : MonoBehaviour
     [SerializeField] private bool isProtected = false;
     [SerializeField] [Range(0,10)] private int absorbed = 0;
 
-
+    private void Start()
+    {
+        controller = GetComponent<ThirdPersonMovement>();
+    }
 
     private void Update()
     {
         if (Input.GetKeyDown(_spellKeybind))
         {
             CreateShield();
+            controller.OnDisable();
         }
 
         if (Input.GetKeyDown(_spellCancel))
         {
             ExplodeShield();
+            controller.OnEnable();
         }
 
         if (isProtected)
