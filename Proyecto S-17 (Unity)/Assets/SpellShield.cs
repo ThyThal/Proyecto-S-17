@@ -12,7 +12,6 @@ public class SpellShield : MonoBehaviour
     [SerializeField] private KeyCode _spellKeybind = KeyCode.Alpha1;
     [SerializeField] private KeyCode _spellCancel = KeyCode.Space;
     [SerializeField] private Transform _intersectionArea;
-    [SerializeField] private GameObject _explosionPrefab;
 
     [SerializeField] private bool isProtected = false;
     [SerializeField] [Range(0,10)] private int absorbed = 0;
@@ -68,8 +67,6 @@ public class SpellShield : MonoBehaviour
     {
         if (isProtected)
         {
-            var a =Instantiate(_explosionPrefab);
-            Destroy(a, 2f);
             _characterAnimator.SetTrigger("ExplodeShield");
             _spellAnimator.SetTrigger("DeactivateShield");
             Debug.Log("EPLOTAR!!!");
